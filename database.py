@@ -14,7 +14,7 @@ load_dotenv(PROJECT_DIR / ".env")
 
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
-    "postgresql://postgres:6BBqXxE2ABvG3kRi@db.igugfmbitwzxawfnoehs.supabase.co:5432/postgres",
+    "postgresql+psycopg://postgres.igugfmbitwzxawfnoehs:6BBqXxE2ABvG3kRi@aws-1-ap-northeast-1.pooler.supabase.com:5432/postgres",
 )
 
 engine = create_engine(DATABASE_URL, pool_pre_ping=True)
